@@ -4,13 +4,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(199, 135, 15);
+  background-color: rgb(30, 30, 50);
+  color: rgb(255, 255, 255);
   font-size: 1.3rem;
+  text-align: center;
 }
 
 .title {
   padding: 2px;
-  border: 2px solid rgb(0, 0, 0);
+  width: 15vw;
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 5px;
 }
 
@@ -21,12 +24,13 @@ nav {
 .categories {
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   list-style: none;
 }
 
 .carrito {
   margin-right: 20px;
+  width: 15vw;
   position: relative;
 }
 
@@ -34,11 +38,39 @@ nav {
   padding: 0px 6px;
   position: absolute;
   top: -20%;
-  left: 100%;
+  left: 55%;
   border: 1px solid black;
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
+  color: rgb(30, 30, 50);
+}
+
+.itemCount {
+  padding: 5px;
+  height: 110px;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid rgb(30, 30, 50);
+  border-radius: 5px;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.divBotonesContador {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.botonContador {
+  width: 30px;
+}
+
+.botonAniadirAlCarrito {
+  font-size: 1.2rem;
 }

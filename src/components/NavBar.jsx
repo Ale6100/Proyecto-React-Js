@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <header className="navBar">
       <div className="title">
-        <p>BEST BURGERS</p>
+        <p>SPACE TRAVELS</p>
       </div>
 
       <nav>
@@ -14,13 +14,13 @@ const NavBar = () => {
             <p>Destacados</p>
           </li>
           <li>
-            <p>Hamburguesas</p>
+            <p>Planetas</p>
           </li>
           <li>
-            <p>Bebidas</p>
+            <p>Satélites</p>
           </li>
           <li>
-            <p>Ensaladas</p>
+            <p>Combos</p>
           </li>
           <li>
             <p>Contacto</p>
