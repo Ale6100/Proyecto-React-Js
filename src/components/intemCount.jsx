@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const IntemCount = ({stock, initial}) => {
+const IntemCount = ({stock, initial, clickAgregar}) => {
     
     const [cantidad, setCantidad] = useState(initial); // El estado inicial de cantidad es initial
 
@@ -12,7 +12,7 @@ const IntemCount = ({stock, initial}) => {
     }
 
     function disminuirContador() { // Disminuye en 1 siempre y cuando cantidad sea mayor que cero
-        if (cantidad > 0) {
+        if (cantidad > 1) {
             setCantidad(cantidad-1)
         }
     }
@@ -30,7 +30,7 @@ const IntemCount = ({stock, initial}) => {
             </div>
 
             <div>
-                <button className="botonAniadirAlCarrito">Añadir al carrito</button>
+                <button className="botonAniadirAlCarrito" onClick={clickAgregar}>Añadir al carrito</button>
             </div>
         </div>
     );
