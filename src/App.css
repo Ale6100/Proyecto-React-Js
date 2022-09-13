@@ -1,3 +1,8 @@
+img {
+  width: 100%;
+  height: 100%;
+}
+
 .navBar {
   width: 100%;
   padding: 5px;
@@ -49,28 +54,83 @@ nav {
 }
 
 .itemCount {
-  padding: 5px;
-  height: 110px;
-  max-width: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border: 2px solid rgb(30, 30, 50);
-  border-radius: 5px;
   align-items: center;
-  font-size: 1.3rem;
 }
 
 .divBotonesContador {
+  margin-bottom: 5px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .botonContador {
-  width: 30px;
+  width: 50px;
+  font-size: 1.2rem;
+  border: 2px solid rgb(30, 30, 50);
+  border-radius: 2px;
+  transition: transform 0.1s;
+}
+
+.cantidadContadorItemCount {
+  margin: 0 20px;
 }
 
 .botonAniadirAlCarrito {
+  padding: 1px 10px;
   font-size: 1.2rem;
+  border: 2px solid rgb(30, 30, 50);
+  border-radius: 5px;
+  transition: transform 0.1s;
+}
+
+.botonContador:active, .botonAniadirAlCarrito:active {
+  transform: scale(0.9);
+}
+
+.divItem {
+  padding-bottom: 10px;
+  max-width: 225px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 3px solid rgb(30, 30, 50);
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.divImagenItem {
+  width: 100%;
+  height: 200px;
+}
+
+.divTitlePriceItem {
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pTitleItem {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.itemList {
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 1px;
+}
+
+.loader {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
 }

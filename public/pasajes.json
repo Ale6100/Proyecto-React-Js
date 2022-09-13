@@ -1,0 +1,89 @@
+[
+    {
+        "id" : 1,
+        "img" : "mercurio.png",
+        "title" : "Mercurio",
+        "price" : 2000,
+        "stock" : 20
+    },
+
+    {
+        "id" : 2,
+        "img" : "venus.png",
+        "title" : "Venus",
+        "price" : 15000,
+        "stock" : 13
+    },
+
+    {
+        "id" : 3,
+        "img" : "luna.png",
+        "title" : "Luna",
+        "price" : 10000,
+        "stock" : 30
+    },
+
+    {
+        "id" : 4,
+        "img" : "marte.png",
+        "title" : "Marte",
+        "price" : 15000,
+        "stock" : 42
+    },
+
+    {
+        "id" : 5,
+        "img" : "jupiter.png",
+        "title" : "Jupiter",
+        "price" : 30000,
+        "stock" : 11
+    },
+
+    {
+        "id" : 6,
+        "img" : "europa.png",
+        "title" : "Europa",
+        "price" : 25000,
+        "stock" : 14
+    },
+
+    {
+        "id" : 7,
+        "img" : "saturno.png",
+        "title" : "Saturno",
+        "price" : 35000,
+        "stock" : 18
+    },
+
+    {
+        "id" : 8,
+        "img" : "titan.png",
+        "title" : "Titán",
+        "price" : 30000,
+        "stock" : 16
+    },
+
+    {
+        "id" : 9,
+        "img" : "urano.png",
+        "title" : "Urano",
+        "price" : 40000,
+        "stock" : 4
+    },
+
+    {
+        "id" : 10,
+        "img" : "neptuno.png",
+        "title" : "Neptuno",
+        "price" : 40000,
+        "stock" : 7
+    },
+
+    {
+        "id" : 11,
+        "img" : "pluton.png",
+        "title" : "Plutón",
+        "price" : 50000,
+        "stock" : 10
+    }
+]

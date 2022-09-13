@@ -20,7 +20,7 @@ const NavBar = () => {
             <p>Satélites</p>
           </li>
           <li>
-            <p>Combos</p>
+            <p>Otros</p>
           </li>
           <li>
             <p>Contacto</p>
