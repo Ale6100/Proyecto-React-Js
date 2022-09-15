@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import fetchSimulado from '../utils/fetchSimulado';
 import Loader from '../components/Loader';
@@ -26,7 +27,7 @@ const ItemListContainer = (props) => {
         <div>
             <p>{props.greeting}</p>
             {
-                loading ? <Loader /> : <ItemList items={data}/> // Ejecuto el componente Loader mientras el array de datos no está cargado
+                loading ? <Loader /> : <ItemList items={data} /> // Ejecuto el componente Loader mientras el array de datos no está cargado
             }
         </div>
     );

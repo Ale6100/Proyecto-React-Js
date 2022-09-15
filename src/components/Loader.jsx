@@ -1,3 +1,4 @@
+import React from 'react';
 import { Momentum } from '@uiball/loaders'
 
 // Creo un componente Loader. La animación que trae la voy a usar para indicarle a un usuario cuando ciertos datos no estén listos para ser mostrados

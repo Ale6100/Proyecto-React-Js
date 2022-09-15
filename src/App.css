@@ -54,6 +54,7 @@ nav {
 }
 
 .itemCount {
+  width: 190px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,11 +64,11 @@ nav {
   margin-bottom: 5px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .botonContador {
-  width: 50px;
+  width: 35%;
   font-size: 1.2rem;
   border: 2px solid rgb(30, 30, 50);
   border-radius: 2px;
@@ -76,9 +77,11 @@ nav {
 
 .cantidadContadorItemCount {
   margin: 0 20px;
+  width: 30%;
 }
 
 .botonAniadirAlCarrito {
+  width: 100%;
   padding: 1px 10px;
   font-size: 1.2rem;
   border: 2px solid rgb(30, 30, 50);
@@ -96,6 +99,7 @@ nav {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
   border: 3px solid rgb(30, 30, 50);
   border-radius: 10px;
   font-size: 1.2rem;
@@ -134,3 +138,75 @@ nav {
   left: 50vw;
   transform: translate(-50%, -50%);
 }
+
+.divDetail {
+  margin: 5px;
+  padding: 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "divIzquierda divDerecha divDerecha"
+  "divIzquierda divAbajo   divAbajo";
+  align-items: center;
+  text-align: center;
+  font-size: 1.3rem;
+  border: 3px solid rgb(30, 30, 50);
+  border-radius: 5px;
+}
+
+.divIzquierdaDetail {
+  grid-area: divIzquierda;
+}
+
+.divIzquierdaDetail img {
+  grid-area: divIzquierda;
+  border-radius: 7px;
+  position: relative;
+  top: 2px;
+}
+
+.divDerechaDetail {
+  padding: 0px 5px;
+  grid-area: divDerecha;
+  display: flex;
+  flex-direction: column;
+}
+
+.pTitleDetail {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.pDescriptionDetail {
+  font-size: 1.5rem;
+}
+
+.divContenedorDetail {
+  grid-area: divAbajo;
+  display: flex;
+  justify-content: space-around;
+}
+
+.divDetalles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.divDetalles p span {
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
+
+.divContadorPrecio {
+  padding: 10px;
+  border: 3px solid rgb(30, 30, 50);
+  border-radius: 5px;
+}
+
+
+
+
+

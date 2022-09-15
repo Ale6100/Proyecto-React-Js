@@ -1,7 +1,7 @@
 [
     {
         "id" : 1,
-        "img" : "mercurio.png",
+        "pictureUrl" : "mercurio.webp",
         "title" : "Mercurio",
         "price" : 2000,
         "stock" : 20
@@ -9,7 +9,7 @@
 
     {
         "id" : 2,
-        "img" : "venus.png",
+        "pictureUrl" : "venus.webp",
         "title" : "Venus",
         "price" : 15000,
         "stock" : 13
@@ -17,15 +17,24 @@
 
     {
         "id" : 3,
-        "img" : "luna.png",
+        "pictureUrl" : "luna.webp",
         "title" : "Luna",
         "price" : 10000,
-        "stock" : 30
+        "stock" : 30,
+        "details" : {
+            "category" : "satélite",
+            "orbita" : "Tierra",
+            "distancekm" : 384400,
+            "gravityms" : 1.62,
+            "period" : "27d 7h 43min",
+            "gas" : false
+        },
+        "description" : "¿Ganas de viajar al segundo astro pisado por el hombre? No te pierdas la experiencia a un precio reducido!"
     },
 
     {
         "id" : 4,
-        "img" : "marte.png",
+        "pictureUrl" : "marte.webp",
         "title" : "Marte",
         "price" : 15000,
         "stock" : 42
@@ -33,7 +42,7 @@
 
     {
         "id" : 5,
-        "img" : "jupiter.png",
+        "pictureUrl" : "jupiter.webp",
         "title" : "Jupiter",
         "price" : 30000,
         "stock" : 11
@@ -41,7 +50,7 @@
 
     {
         "id" : 6,
-        "img" : "europa.png",
+        "pictureUrl" : "europa.webp",
         "title" : "Europa",
         "price" : 25000,
         "stock" : 14
@@ -49,7 +58,7 @@
 
     {
         "id" : 7,
-        "img" : "saturno.png",
+        "pictureUrl" : "saturno.webp",
         "title" : "Saturno",
         "price" : 35000,
         "stock" : 18
@@ -57,7 +66,7 @@
 
     {
         "id" : 8,
-        "img" : "titan.png",
+        "pictureUrl" : "titan.webp",
         "title" : "Titán",
         "price" : 30000,
         "stock" : 16
@@ -65,7 +74,7 @@
 
     {
         "id" : 9,
-        "img" : "urano.png",
+        "pictureUrl" : "urano.webp",
         "title" : "Urano",
         "price" : 40000,
         "stock" : 4
@@ -73,7 +82,7 @@
 
     {
         "id" : 10,
-        "img" : "neptuno.png",
+        "pictureUrl" : "neptuno.webp",
         "title" : "Neptuno",
         "price" : 40000,
         "stock" : 7
@@ -81,7 +90,7 @@
 
     {
         "id" : 11,
-        "img" : "pluton.png",
+        "pictureUrl" : "pluton.webp",
         "title" : "Plutón",
         "price" : 50000,
         "stock" : 10
