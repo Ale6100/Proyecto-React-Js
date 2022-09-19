@@ -1,22 +1,41 @@
 [
     {
         "id" : 1,
+        "id_category" : 1,
         "pictureUrl" : "mercurio.webp",
         "title" : "Mercurio",
-        "price" : 2000,
-        "stock" : 20
+        "price" : 5000,
+        "stock" : 20,
+        "details" : {
+            "category" : "planeta",
+            "orbita" : "Sol",
+            "radiokm" : 2439.7,
+            "gravityms" : 3.7,
+            "period" : "58d 15h 30m"
+        },
+        "description" : "Conozca al planeta más pequeño del sistema solar. Tiene la mejor vista a nuestra querida estrella!"
     },
 
     {
         "id" : 2,
+        "id_category" : 1,
         "pictureUrl" : "venus.webp",
         "title" : "Venus",
         "price" : 15000,
-        "stock" : 13
+        "stock" : 13,
+        "details" : {
+            "category" : "planeta",
+            "orbita" : "Sol",
+            "radiokm" : 6051.8,
+            "gravityms" : 8.87,
+            "period" : "116d 18h"
+        },
+        "description" : "Animate a conocer el planeta con el día más largo del sistema solar!"
     },
 
     {
         "id" : 3,
+        "id_category" : 2,
         "pictureUrl" : "luna.webp",
         "title" : "Luna",
         "price" : 10000,
@@ -24,75 +43,163 @@
         "details" : {
             "category" : "satélite",
             "orbita" : "Tierra",
-            "distancekm" : 384400,
+            "radiokm" : 1737.4,
             "gravityms" : 1.62,
-            "period" : "27d 7h 43min",
-            "gas" : false
+            "period" : "27d 7h 43min"
         },
         "description" : "¿Ganas de viajar al segundo astro pisado por el hombre? No te pierdas la experiencia a un precio reducido!"
     },
 
     {
         "id" : 4,
+        "id_category" : 1,
         "pictureUrl" : "marte.webp",
         "title" : "Marte",
-        "price" : 15000,
-        "stock" : 42
+        "price" : 30000,
+        "stock" : 42,
+        "details" : {
+            "category" : "planeta",
+            "orbita" : "Sol",
+            "radiokm" : 3389.5,
+            "gravityms" : 3.721,
+            "period" : "1d 0h 37m"
+        },
+        "description" : "El favorito de todos: Pasea por el famoso planeta rojo antes de que se agote el stock!"
     },
 
     {
         "id" : 5,
+        "id_category" : 1,
         "pictureUrl" : "jupiter.webp",
-        "title" : "Jupiter",
+        "title" : "Júpiter",
         "price" : 30000,
-        "stock" : 11
+        "stock" : 11,
+        "details" : {
+            "category" : "planeta",
+            "orbita" : "Sol",
+            "radiokm" : 69.911,
+            "gravityms" : 24.79,
+            "period" : "9h 56m"
+        },
+        "description" : "Que el planeta más grande del sistema solar no te de miedo! Sobrevuela al gigante gaseoso a una distancia segura"
     },
 
     {
         "id" : 6,
+        "id_category" : 2,
         "pictureUrl" : "europa.webp",
         "title" : "Europa",
         "price" : 25000,
-        "stock" : 14
+        "stock" : 14,
+        "details" : {
+            "category" : "satélite",
+            "orbita" : "Júpiter",
+            "radiokm" : 1560.8,
+            "gravityms" : 1.315,
+            "period" : "3d 13h"
+        },
+        "description" : "¿Ganas de conocer al satélite más famoso de Júpiter? Visite el cuerpo celeste con menos accidentes geográficos del sistema solar"
     },
 
     {
         "id" : 7,
+        "id_category" : 1,
         "pictureUrl" : "saturno.webp",
         "title" : "Saturno",
         "price" : 35000,
-        "stock" : 18
+        "stock" : 18,
+        "details" : {
+            "category" : "planeta",
+            "orbita" : "Sol",
+            "radiokm" : 58232,
+            "gravityms" : 10.44,
+            "period" : "10h 34m"
+        },
+        "description" : "Sobrevuela el planeta gaseoso más famoso y mira de cerca sus anillos!"
     },
 
     {
         "id" : 8,
+        "id_category" : 2,
         "pictureUrl" : "titan.webp",
         "title" : "Titán",
         "price" : 30000,
-        "stock" : 16
+        "stock" : 16,
+        "details" : {
+            "category" : "satélite",
+            "orbita" : "Saturno",
+            "radiokm" : 2574.7,
+            "gravityms" : 1.35,
+            "period" : "15d 21h"
+        },
+        "description" : "¿Un satélite más grande que Mercurio? Adéntrate en una experiencia imperdible para contarle a los nietos"
     },
 
     {
         "id" : 9,
+        "id_category" : 1,
         "pictureUrl" : "urano.webp",
         "title" : "Urano",
         "price" : 40000,
-        "stock" : 4
+        "stock" : 4,
+        "details" : {
+            "category" : "planeta",
+            "orbita" : "Sol",
+            "radiokm" : 25362,
+            "gravityms" : 8.87,
+            "period" : "17h 14m"
+        },
+        "description" : "El primer planeta descubierto por medio de un telescopio está ahora al alcance de un click. No te lo pierdas!"
     },
 
     {
         "id" : 10,
+        "id_category" : 1,
         "pictureUrl" : "neptuno.webp",
         "title" : "Neptuno",
         "price" : 40000,
-        "stock" : 7
+        "stock" : 7,
+        "details" : {
+            "category" : "planeta",
+            "orbita" : "Sol",
+            "radiokm" : 24622,
+            "gravityms" : 11.15,
+            "period" : "16h 6m"
+        },
+        "description" : "El planeta más lejano del sistema solar y el primero en ser descubierto gracias a predicciones matemáticas"
     },
 
     {
         "id" : 11,
+        "id_category" : 3,
         "pictureUrl" : "pluton.webp",
         "title" : "Plutón",
         "price" : 50000,
-        "stock" : 10
+        "stock" : 10,
+        "details" : {
+            "category" : "planeta enano",
+            "orbita" : "Sol",
+            "radiokm" : 1188.3,
+            "gravityms" : 0.62,
+            "period" : "6d 9h"
+        },
+        "description" : "30% más pequeño que la Luna pero con una gran historia por contar. Visita al expulsado del grupo y recordado por todos!"
+    },
+
+    {
+        "id" : 12,
+        "id_category" : 3,
+        "pictureUrl" : "eris.webp",
+        "title" : "Eris",
+        "price" : 47000,
+        "stock" : 14,
+        "details" : {
+            "category" : "planeta enano",
+            "orbita" : "Sol",
+            "radiokm" : 1163,
+            "gravityms" : 0.82,
+            "period" : "1d 2h"
+        },
+        "description" : "El planeta enano más masivo del sistema solar"
     }
 ]

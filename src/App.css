@@ -17,13 +17,16 @@ img {
 
 .title {
   padding: 2px;
-  width: 15vw;
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 5px;
+  width: 20vw;
+}
+
+.title .linkNav {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }
 
 nav {
-  width: 70vw;
+  width: 60vw;
 }
 
 .categories {
@@ -33,13 +36,20 @@ nav {
   list-style: none;
 }
 
+.categories .linkNav {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  white-space: nowrap;
+  display: inline-block;
+  border-radius: 5px;
+}
+
 .carrito {
-  margin-right: 20px;
   width: 15vw;
   position: relative;
 }
 
-.iconoCantidadProductos { /* Esta clase se mueve relativa a la etiqueta con clase "carrito" */
+.iconoCantidadProductos {
   padding: 0px 6px;
   position: absolute;
   top: -20%;
@@ -95,7 +105,7 @@ nav {
 
 .divItem {
   padding-bottom: 10px;
-  max-width: 225px;
+  width: 210px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -103,11 +113,11 @@ nav {
   border: 3px solid rgb(30, 30, 50);
   border-radius: 10px;
   font-size: 1.2rem;
+  position: relative;
 }
 
 .divImagenItem {
-  width: 100%;
-  height: 200px;
+  height: 210px;
 }
 
 .divTitlePriceItem {
@@ -121,6 +131,31 @@ nav {
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 1.8rem;
+}
+
+.divInfoItem {
+  padding: 0px 3px; 
+  position: absolute;
+  right: 5%;
+  top: 1.5%;
+  border: 2px solid rgb(120, 120, 200);
+  border-radius: 4px;
+  background-color: rgb(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.divInfoItem:hover {
+  transform: scale(1.3);
+  transition: transform 0.3s;
+  
+}
+
+.divInfoItem button {
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  border: 0px;
+  background-color: rgb(0, 0, 0, 0);
+  cursor: pointer;
 }
 
 .itemList {
@@ -141,7 +176,7 @@ nav {
 
 .divDetail {
   margin: 5px;
-  padding: 1px;
+  padding: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -152,7 +187,7 @@ nav {
   text-align: center;
   font-size: 1.3rem;
   border: 3px solid rgb(30, 30, 50);
-  border-radius: 5px;
+  border-radius: 7px;
 }
 
 .divIzquierdaDetail {
@@ -161,7 +196,9 @@ nav {
 
 .divIzquierdaDetail img {
   grid-area: divIzquierda;
+  border: 3px solid rgb(30, 30, 50);
   border-radius: 7px;
+  box-shadow: 0px 0px 10px;
   position: relative;
   top: 2px;
 }
@@ -205,8 +242,3 @@ nav {
   border: 3px solid rgb(30, 30, 50);
   border-radius: 5px;
 }
-
-
-
-
-

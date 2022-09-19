@@ -1,13 +1,13 @@
 import React from 'react';
 import agregarAlCarrito from '../utils/agregarAlCarrito'; // Importo la función agregarAlCarrito
-import IntemCount from './IntemCount';
+import ItemCount from './ItemCount';
 
 const ItemDetail = ({ item }) => { // Pido que coloque en pantalla una breve descripción más amplia sobre el pasaje seleccionado
 
     return (
         <div className="divDetail">
             <div className="divIzquierdaDetail">
-                <img src={`./img/${item.pictureUrl}`} />
+                <img src={`/img/${item.pictureUrl}`} />
             </div>
 
             <div className="divDerechaDetail">
@@ -17,14 +17,13 @@ const ItemDetail = ({ item }) => { // Pido que coloque en pantalla una breve des
             </div>
 
             <div className="divContenedorDetail">
-                {/* Tuve que poner este condicional porque react trataba de buscar las propiedades del objeto details cuando aún no estaba creado */}
                 {(item.details != undefined) && (
                 <div className="divDetalles">
-                    <p> <span>Categoria</span>: {item.details.category}</p>
+                    <p> <span>Categoría</span>: {item.details.category}</p>
                     <p><span>Orbita a</span>: {item.details.orbita}</p>
-                    <p><span>Distancia</span>: {item.details.distancekm}km</p>
+                    <p><span>Radio</span>: {item.details.radiokm}km</p>
                     <p><span>Gravedad</span>: {item.details.gravityms}m/s^2</p>
-                    <p><span>Período de rotación</span>: {item.details.period}</p>
+                    <p><span>Duración del día</span>: {item.details.period}</p>
                 </div>
                 )}
 
@@ -34,7 +33,7 @@ const ItemDetail = ({ item }) => { // Pido que coloque en pantalla una breve des
                         <p className="pStockDetail">Stock: {item.stock}</p>
                     </div>
 
-                    <IntemCount stock={item.stock} initial={1} clickAgregar={(cantidad) => agregarAlCarrito(item.title, cantidad)} />
+                    <ItemCount stock={item.stock} initial={1} clickAgregar={(cantidad) => agregarAlCarrito(item.title, cantidad)} />
                 </div>
             </div>
         </div>

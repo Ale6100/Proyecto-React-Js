@@ -8,7 +8,7 @@ const IntemCount = ({stock, initial, clickAgregar}) => {
     function aumentarContador() { // Aumenta en 1 el número que representa la cantidad items, siempre y cuando haya stock
         if (cantidad < stock) {
             setCantidad(cantidad+1)
-        }   
+        }
     }
 
     function disminuirContador() { // Disminuye en 1 siempre y cuando cantidad sea mayor que cero

@@ -1,7 +1,7 @@
 import React from 'react';
 import Item from './ltem';
 
-const ItemList = ({ items }) => { // Obtiene el array de items. Coloca uno por uno en el DOM gracias al componente Item y el método map
+const ItemList = ({ items }) => { // Obtiene un array de items y los coloca uno por uno en el DOM gracias al componente Item y el método map
     
     return (
         <div className="itemList">
@@ -9,6 +9,7 @@ const ItemList = ({ items }) => { // Obtiene el array de items. Coloca uno por u
             items.map( item => (
                 <Item            
                     key = {item.id}
+                    id = {item.id}
                     pictureUrl = {item.pictureUrl}
                     title = {item.title}
                     price = {item.price}

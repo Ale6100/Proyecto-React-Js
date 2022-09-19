@@ -1,33 +1,40 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import fetchSimulado from '../utils/fetchSimulado';
 import Loader from '../components/Loader';
 import ItemList from '../components/ItemList';
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
 
     const [data, setData] = useState([]) // Array donde estarán los items del archivo pasajes.json
     const [loading, setLoading] = useState(false) // Establezco que inicialmente los archivos no se están cargando
+    const { id } = useParams() // Devuelve el id que viene en la url 
 
     useEffect( () => {
-        setLoading(true) // seteo al Loading como true para indicar que ya se inició a cargar los datos
-        fetch("./pasajes.json") // Traigo los pasajes del archivo json
+        setLoading(true) // Seteo al loading como true para indicar que ya se empezaron a cargar los datos
+        fetch("/pasajes.json")
         .then(response => response.json())
-        .then(dataFromDB => { // Simulo que el array traido del fetch está siendo traido por una promesa (fetchSimulado) que tarda dos segundos en resolverse
-            fetchSimulado(dataFromDB)
-            .then(result => setData(result)) // Actualizo el array data. Lo declaro como el array que devolvió el fetch
-            .catch(err => console.error(err))
-            .finally(() => setLoading(false)) // Establezco que cuando terminó de resolverse, ya no se están cargando los datos
-            
+        .then(dataFromDB => {
+            if (id != undefined) { // Si pasamos un id en la url, entonces no extraigo todos los productos, sino sólo el que tiene integrado dicho id
+                fetchSimulado(dataFromDB.filter(item => item.id_category == id))
+                .then(result => setData(result))
+                .catch(err => console.error(err))
+                .finally(() => setLoading(false))
+            } else {
+                fetchSimulado(dataFromDB) // Simulo que el array traido del fetch está siendo traido por una promesa (fetchSimulado) que tarda dos segundos en resolverse
+                .then(result => setData(result)) // Actualizo el array data. Lo declaro como el array que devolvió el fetch
+                .catch(err => console.error(err))
+                .finally(() => setLoading(false)) // Establezco que cuando terminó de resolverse, ya no se están cargando los datos
+            }
         })
         .catch(err => console.error(err))
-    }, [])
+    }, [id]) // la función flecha del useEffect se va a ejecutar cuando se monta el componente y cuando se actualiza el id
 
     return (
         <div>
-            <p>{props.greeting}</p>
             {
-                loading ? <Loader /> : <ItemList items={data} /> // Ejecuto el componente Loader mientras el array de datos no está cargado
+                loading ? <Loader /> : <ItemList items={data} /> // Ejecuto el componente Loader mientras esperamos a que el array de datos esté cargado
             }
         </div>
     );
