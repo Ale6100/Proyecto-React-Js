@@ -9,6 +9,7 @@ const ItemDetailContainer = () => {
     
     const [data, setData] = useState({}) // Objeto donde estará algún item del archivo pasajes.json
     const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(false)
     const { id } = useParams()
 
     useEffect( () => {
@@ -18,16 +19,16 @@ const ItemDetailContainer = () => {
         .then(dataFromDB => { 
             fetchSimulado(dataFromDB.find(item => item.id == id)) // Selecciono el objeto correspondiente al id dado por el useParams() 
             .then(result => setData(result)) // Actualizo el objeto data. Lo declaro como el objeto que devolvió el fetch
-            .catch(err => console.error(err))
+            .catch(err => {console.error(err); setError(true)})
             .finally(() => setLoading(false))
         })
         .catch(err => console.error(err))
-    }, [id])
+    }, [])
         
     return (
         <div>
             {
-                loading ? <Loader /> : <ItemDetail item={data} />
+                loading ? <Loader /> : (error ? <p className="errorCargaDatos">Error! No se cargaron los datos. Intente de nuevo más tarde</p> : <ItemDetail item={data} />) // Coloco un mensaje de error en caso de que los datos no hayan podido ser cargados
             }
         </div>
     )

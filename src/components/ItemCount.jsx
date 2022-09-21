@@ -1,18 +1,18 @@
 import React from 'react';
 import { useState } from 'react';
 
-const IntemCount = ({stock, initial, clickAgregar}) => {
+const IntemCount = ({stock, initial, clickAgregar, setContadorItems}) => {
     
     const [cantidad, setCantidad] = useState(initial);
 
-    function aumentarContador() { // Aumenta en 1 el número que representa la cantidad items, siempre y cuando haya stock
+    function aumentarContador() { // Aumenta en 1 el número que representa la cantidad items a añadir al carrito, siempre y cuando haya stock
         if (cantidad < stock) {
             setCantidad(cantidad+1)
         }
     }
 
     function disminuirContador() { // Disminuye en 1 siempre y cuando cantidad sea mayor que cero
-        if (cantidad > 1) {
+        if (cantidad > 0) {
             setCantidad(cantidad-1)
         }
     }
@@ -25,7 +25,7 @@ const IntemCount = ({stock, initial, clickAgregar}) => {
                 <button className="botonContador" onClick={disminuirContador}>-</button>
             </div>
 
-            <button className="botonAniadirAlCarrito" onClick={()=>clickAgregar(cantidad)} disabled={(stock<1)}>Añadir al carrito</button>
+            <button className="botonAniadirAlCarrito" onClick={()=>{clickAgregar(cantidad); setContadorItems(cantidad)}} disabled={cantidad==0}>Añadir al carrito</button> {/* Pido que la función setContadorItems se active usando el valor "cantidad" para cambiar el valor del contador*/}
         </div>
     );
 }

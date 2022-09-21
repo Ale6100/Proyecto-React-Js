@@ -4,9 +4,9 @@ import "toastify-js/src/toastify.css";
 const agregarAlCarrito = (title_prod, cant_prod) => { // Le muestro al usuario que los pasajes que pidió ya se agregaron al carrito, mediante la librería Toastify
     let texto
     if (cant_prod == 1) {
-        texto = `Un pasaje con destino a ${title_prod} agregado al carrito`
+      texto = `Un pasaje con destino a ${title_prod} agregado al carrito`
     } else {
-        texto = `Agregaste ${cant_prod} pasajes con destino a ${title_prod} al carrito`
+      texto = `Agregaste ${cant_prod} pasajes con destino a ${title_prod} al carrito`
     }
     Toastify({
         text: texto,

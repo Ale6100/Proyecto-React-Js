@@ -5,7 +5,7 @@ const fetchSimulado = (array) => { // Creo una promesa simulando traer un array 
             if (promesaResuelta) {
                 resolve(array)
             } else {
-                reject("Promesa no resuelta")
+                reject("Error: no se pudieron traer los datos solicitados")
             }
         }, 2000)
     })

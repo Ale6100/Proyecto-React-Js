@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import agregarAlCarrito from '../utils/agregarAlCarrito'; // Importo la función agregarAlCarrito
 import ItemCount from './ItemCount';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ item }) => { // Pido que coloque en pantalla una breve descripción más amplia sobre el pasaje seleccionado
+
+    const [contadorItems, setContadorItems] = useState(0)
 
     return (
         <div className="divDetail">
@@ -28,12 +31,14 @@ const ItemDetail = ({ item }) => { // Pido que coloque en pantalla una breve des
                 )}
 
                 <div className="divContadorPrecio">
-                    <div>
-                        <p className="pPriceDetail">${item.price}</p>
-                        <p className="pStockDetail">Stock: {item.stock}</p>
-                    </div>
+                    <p>${item.price}</p>
+                    <p>Stock: {item.stock}</p>
 
-                    <ItemCount stock={item.stock} initial={1} clickAgregar={(cantidad) => agregarAlCarrito(item.title, cantidad)} />
+                    { // Si contadorItems es igual a cero, mostramos el ItemCount. Sino, mostramos el botón que nos lleva al carrito
+                        contadorItems == 0 ?
+                        <ItemCount stock={item.stock} initial={contadorItems} clickAgregar={(cantidad) => {agregarAlCarrito(item.title, cantidad)}} setContadorItems={setContadorItems} /> // Pido que el setContadorItems vaya a ItemCount
+                        : <Link className="linkBotonIrCarrito" to={`/cart`}><button className="botonIrCarrito">Ir al carrito</button></Link>
+                    }
                 </div>
             </div>
         </div>
