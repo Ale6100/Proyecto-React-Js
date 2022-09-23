@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const IntemCount = ({stock, initial, clickAgregar, setContadorItems}) => {
+const IntemCount = ({stock, initial, clickAgregar}) => {
     
     const [cantidad, setCantidad] = useState(initial);
 
@@ -25,7 +25,7 @@ const IntemCount = ({stock, initial, clickAgregar, setContadorItems}) => {
                 <button className="botonContador" onClick={disminuirContador}>-</button>
             </div>
 
-            <button className="botonAniadirAlCarrito" onClick={()=>{clickAgregar(cantidad); setContadorItems(cantidad)}} disabled={cantidad==0}>Añadir al carrito</button> {/* Pido que la función setContadorItems se active usando el valor "cantidad" para cambiar el valor del contador*/}
+            <button className="botonAniadirAlCarrito" onClick={()=>clickAgregar(cantidad)} disabled={cantidad==0}>Añadir al carrito</button>
         </div>
     );
 }

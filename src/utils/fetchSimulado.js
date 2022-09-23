@@ -7,7 +7,7 @@ const fetchSimulado = (array) => { // Creo una promesa simulando traer un array 
             } else {
                 reject("Error: no se pudieron traer los datos solicitados")
             }
-        }, 2000)
+        }, 100)
     })
 }
 

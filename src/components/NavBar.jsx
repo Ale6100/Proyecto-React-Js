@@ -12,6 +12,9 @@ const NavBar = () => {
       <nav>
         <ul className="categories">
           <li>
+            <Link to="/" className='linkNav'>Inicio</Link>
+          </li>
+          <li>
             <Link to="/category/1" className='linkNav'>Planetas</Link>
           </li>
           <li>

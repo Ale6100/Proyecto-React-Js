@@ -28,7 +28,9 @@ const ItemDetailContainer = () => {
     return (
         <div>
             {
-                loading ? <Loader /> : (error ? <p className="errorCargaDatos">Error! No se cargaron los datos. Intente de nuevo más tarde</p> : <ItemDetail item={data} />) // Coloco un mensaje de error en caso de que los datos no hayan podido ser cargados
+            loading ?
+            <Loader /> :
+            (error ? <p className="errorCargaDatos">Error! No se cargaron los datos. Intente de nuevo más tarde</p> : <ItemDetail item={data} />) // Coloco un mensaje de error en caso de que los datos no hayan podido ser cargados
             }
         </div>
     )

@@ -35,7 +35,9 @@ const ItemListContainer = () => {
     return (
         <div>
             {
-                loading ? <Loader /> : (error ? <p className="errorCargaDatos">Error! No se cargaron los datos. Intente de nuevo más tarde</p> : <ItemList items={data} />)
+            loading ?
+            <Loader /> :
+            (error ? <p className="errorCargaDatos">Error! No se cargaron los datos. Intente de nuevo más tarde</p> : <ItemList items={data} />)
             }
         </div>
     );

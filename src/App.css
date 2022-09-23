@@ -5,7 +5,7 @@ img {
 
 .navBar {
   width: 100%;
-  padding: 5px;
+  padding: 10px 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,9 +44,13 @@ nav {
   border-radius: 5px;
 }
 
-.carrito {
+.iconoCarrito {
   width: 15vw;
   position: relative;
+}
+
+.iconoCarrito a {
+  color: rgb(255, 255, 255);
 }
 
 .iconoCantidadProductos {
@@ -101,6 +105,10 @@ nav {
 
 .botonContador:active, .botonAniadirAlCarrito:active {
   transform: scale(0.9);
+}
+
+.botonContador:hover, .botonAniadirAlCarrito:hover {
+  background-color: rgb(200, 200, 200);
 }
 
 .divItem {
@@ -257,6 +265,10 @@ nav {
   font-size: 1.1rem;
 }
 
+.botonIrCarrito:hover {
+  background-color: rgb(200, 200, 200);
+}
+
 .errorCargaDatos {
   padding: 1%;
   width: 100%;
@@ -266,4 +278,127 @@ nav {
   left: 50vw;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.contenedor-carrito {
+  padding: 0 5px;
+}
+
+.titleCarrito {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.carrito {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 1px;
+  row-gap: 5px;
+  flex-wrap: wrap;
+}
+
+.divItemCarrito {
+  width: 350px;
+  height: 250px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 3px solid rgb(30, 30, 50);
+  border-radius: 7px;
+  font-size: 1.4rem;
+}
+
+.divImagenTituloItemCarrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+
+.borde-derecha {
+  border-right: 3px dashed rgb(30, 30, 50);
+}
+
+.divImagenItemCarrito {
+  width: 150px;
+}
+
+.divImagenItemCarrito img {
+  border-radius: 7px;
+}
+
+.pTitleItemCarrito {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.divpriceItemCarrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+
+.pPriceItemCarrito {
+  font-size: 1rem;
+}
+
+.botonBorrar, .botonComprar {
+  height: 30px;
+  width: 130px;
+  border: 2px solid rgb(30, 30, 50);
+  border-radius: 7px;
+  background-color: rgb(255, 50, 50);
+  transition: transform 0.1s;
+  font-weight: bold;
+}
+
+.botonBorrar:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.botonBorrar:active, .botonComprar:active {
+  transform: scale(0.9);
+}
+
+.botonComprar {
+  background-color: rgb(50, 255, 50);
+}
+
+.botonComprar:hover {
+  background-color: rgb(0, 255, 0);
+}
+
+.carritoVacio {
+  margin-top: 10px;
+  display: flex;
+  font-size: 1.4rem;
+}
+
+.carritoVacio a {
+  text-decoration: none;
+}
+
+.divFinalizarCompra {
+  padding: 5px;
+  width: 300px;
+  text-align: center;
+  border: 3px solid rgb(30, 30, 50);
+  border-radius: 5px;
+}
+
+.divFinalizarCompra p {
+  margin-bottom: 5px;
+}
+
+.divFinalizarCompra div {
+  display: flex;
+  justify-content: space-around;
 }

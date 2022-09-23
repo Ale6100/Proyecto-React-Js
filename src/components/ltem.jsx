@@ -1,12 +1,21 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { CartContext } from './CartContext';
+import alertaProductoAgregado from '../utils/alertaProductoAgregado';
 import ItemCount from './ItemCount';
-import agregarAlCarrito from '../utils/agregarAlCarrito';
 import { Link } from 'react-router-dom';
 
-const Item = ({ id, pictureUrl, title, price, stock }) => {
+const Item = ({ id, pictureUrl, title, price, stock, item }) => {
 
     const [contadorItems, setContadorItems] = useState(0)
+
+    const { addItem } = useContext(CartContext);
+
+    const onAdd = (cantidad) => {
+        alertaProductoAgregado(title, cantidad)
+        setContadorItems(cantidad)
+        addItem(item, cantidad)
+    }
 
     return (
         <div className="divItem">
@@ -21,7 +30,7 @@ const Item = ({ id, pictureUrl, title, price, stock }) => {
 
             { // Análogo a lo colocado en ItemDetail
                 contadorItems == 0 ?
-                <ItemCount stock={stock} initial={contadorItems} clickAgregar={(cantidad) => {agregarAlCarrito(title, cantidad)}} setContadorItems={setContadorItems} /> // Pido que el setContadorItems vaya a ItemCount
+                <ItemCount stock={stock} initial={contadorItems} clickAgregar={(cantidad) => {onAdd(cantidad)}} />
                 : <Link className="linkBotonIrCarrito" to={`/cart`}> <button className="botonIrCarrito">Ir al carrito</button></Link>
             }
             <div className="divInfoItem">
