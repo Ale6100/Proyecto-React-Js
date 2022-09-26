@@ -20,12 +20,12 @@ const IntemCount = ({stock, initial, clickAgregar}) => {
     return (
         <div className="itemCount">
             <div className="divBotonesContador">
-                <button className="botonContador" onClick={aumentarContador}>+</button>
-                <p className="cantidadContadorItemCount">{cantidad}</p>
-                <button className="botonContador" onClick={disminuirContador}>-</button>
+                <button onClick={aumentarContador}>+</button>
+                <p>{cantidad}</p>
+                <button onClick={disminuirContador}>-</button>
             </div>
 
-            <button className="botonAniadirAlCarrito" onClick={()=>clickAgregar(cantidad)} disabled={cantidad==0}>Añadir al carrito</button>
+            <button onClick={()=>clickAgregar(cantidad)} disabled={cantidad==0}>Añadir al carrito</button>
         </div>
     );
 }

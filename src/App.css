@@ -20,7 +20,7 @@ img {
   width: 20vw;
 }
 
-.title .linkNav {
+.title a {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
@@ -36,7 +36,7 @@ nav {
   list-style: none;
 }
 
-.categories .linkNav {
+.categories li a {
   text-decoration: none;
   color: rgb(255, 255, 255);
   white-space: nowrap;
@@ -53,7 +53,7 @@ nav {
   color: rgb(255, 255, 255);
 }
 
-.iconoCantidadProductos {
+.iconoCarrito p {
   padding: 0px 6px;
   position: absolute;
   top: -20%;
@@ -67,48 +67,31 @@ nav {
   color: rgb(30, 30, 50);
 }
 
-.itemCount {
-  width: 190px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.loader {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
 }
 
-.divBotonesContador {
-  margin-bottom: 5px;
+.errorCargaDatos {
+  padding: 1%;
   width: 100%;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.itemList {
+  padding: 5px;
   display: flex;
-  justify-content: space-between;
-}
-
-.botonContador {
-  width: 35%;
-  font-size: 1.2rem;
-  border: 2px solid rgb(30, 30, 50);
-  border-radius: 5px;
-  transition: transform 0.1s;
-}
-
-.cantidadContadorItemCount {
-  margin: 0 20px;
-  width: 30%;
-}
-
-.botonAniadirAlCarrito {
-  width: 100%;
-  padding: 1px 10px;
-  font-size: 1.2rem;
-  border: 2px solid rgb(30, 30, 50);
-  border-radius: 5px;
-  transition: transform 0.1s;
-}
-
-.botonContador:active, .botonAniadirAlCarrito:active {
-  transform: scale(0.9);
-}
-
-.botonContador:hover, .botonAniadirAlCarrito:hover {
-  background-color: rgb(200, 200, 200);
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 1px;
 }
 
 .divItem {
@@ -155,7 +138,6 @@ nav {
 .divInfoItem:hover {
   transform: scale(1.3);
   transition: transform 0.3s;
-  
 }
 
 .divInfoItem button {
@@ -166,20 +148,48 @@ nav {
   cursor: pointer;
 }
 
-.itemList {
-  padding: 5px;
+.itemCount {
+  width: 190px;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  row-gap: 10px;
-  column-gap: 1px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.loader {
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+.divBotonesContador {
+  margin-bottom: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.divBotonesContador button {
+  width: 35%;
+  font-size: 1.2rem;
+  border: 2px solid rgb(30, 30, 50);
+  border-radius: 5px;
+  transition: transform 0.1s;
+}
+
+.divBotonesContador p {
+  margin: 0 20px;
+  width: 30%;
+}
+
+.itemCount button {
+  width: 100%;
+  padding: 1px 10px;
+  font-size: 1.2rem;
+  border: 2px solid rgb(30, 30, 50);
+  border-radius: 5px;
+  transition: transform 0.1s;
+}
+
+.divBotonesContador button:active, .itemCount button:active {
+  transform: scale(0.9);
+}
+
+.divBotonesContador button:hover, .itemCount button:hover {
+  background-color: rgb(200, 200, 200);
 }
 
 .divDetail {
@@ -203,7 +213,6 @@ nav {
 }
 
 .divIzquierdaDetail img {
-  grid-area: divIzquierda;
   border: 3px solid rgb(30, 30, 50);
   border-radius: 7px;
   box-shadow: 0px 0px 10px;
@@ -269,24 +278,23 @@ nav {
   background-color: rgb(200, 200, 200);
 }
 
-.errorCargaDatos {
-  padding: 1%;
-  width: 100%;
-  font-size: 1.8rem;
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
 .contenedor-carrito {
   padding: 0 5px;
 }
 
-.titleCarrito {
+.contenedor-carrito h1 {
   text-align: center;
   font-size: 2.5rem;
+}
+
+.carritoVacio {
+  margin-top: 10px;
+  display: flex;
+  font-size: 1.4rem;
+}
+
+.carritoVacio a {
+  text-decoration: none;
 }
 
 .carrito {
@@ -318,9 +326,6 @@ nav {
   align-items: center;
   height: 100%;
   width: 50%;
-}
-
-.borde-derecha {
   border-right: 3px dashed rgb(30, 30, 50);
 }
 
@@ -332,12 +337,12 @@ nav {
   border-radius: 7px;
 }
 
-.pTitleItemCarrito {
+.divImagenTituloItemCarrito p {
   font-weight: bold;
   font-size: 1.6rem;
 }
 
-.divpriceItemCarrito {
+.divPriceItemCarrito {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -374,16 +379,6 @@ nav {
 
 .botonComprar:hover {
   background-color: rgb(0, 255, 0);
-}
-
-.carritoVacio {
-  margin-top: 10px;
-  display: flex;
-  font-size: 1.4rem;
-}
-
-.carritoVacio a {
-  text-decoration: none;
 }
 
 .divFinalizarCompra {

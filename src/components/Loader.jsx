@@ -1,7 +1,7 @@
 import React from 'react';
 import { Momentum } from '@uiball/loaders'
 
-// La animación que trae el Loader la voy a usar para indicarle a un usuario cuando ciertos datos no estén listos para ser mostrados
+// La animación que trae el Loader la voy a usar para indicarle a un usuario cuando ciertos están siendo traidos desde la base de datos
 
 const Loader = () => { 
     return (

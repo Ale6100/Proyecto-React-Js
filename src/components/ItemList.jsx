@@ -14,7 +14,7 @@ const ItemList = ({ items }) => { // Obtiene un array de items y los coloca uno 
                     title = {item.title}
                     price = {item.price}
                     stock = {item.stock}
-                    item = {item} // También paso el item entero
+                    item = {item}
                 />
             ))
             }

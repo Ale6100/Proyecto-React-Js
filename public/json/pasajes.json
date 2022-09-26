@@ -2,7 +2,7 @@
     {
         "id" : 1,
         "id_category" : 1,
-        "pictureUrl" : "mercurio.webp",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/proyecto-react-5e7e0.appspot.com/o/mercurio.webp?alt=media&token=399b7d78-0db3-410d-a618-cfe45fd84ec9",
         "title" : "Mercurio",
         "price" : 5000,
         "stock" : 20,
@@ -19,7 +19,7 @@
     {
         "id" : 2,
         "id_category" : 1,
-        "pictureUrl" : "venus.webp",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/proyecto-react-5e7e0.appspot.com/o/venus.webp?alt=media&token=a53e3961-a498-4330-aca9-4c3d8a514b3f",
         "title" : "Venus",
         "price" : 15000,
         "stock" : 13,
@@ -36,7 +36,7 @@
     {
         "id" : 3,
         "id_category" : 2,
-        "pictureUrl" : "luna.webp",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/proyecto-react-5e7e0.appspot.com/o/luna.webp?alt=media&token=91f21306-5dae-416e-afff-dcb442a4ba11",
         "title" : "Luna",
         "price" : 10000,
         "stock" : 30,
@@ -53,7 +53,7 @@
     {
         "id" : 4,
         "id_category" : 1,
-        "pictureUrl" : "marte.webp",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/proyecto-react-5e7e0.appspot.com/o/marte.webp?alt=media&token=5e9636e0-45d6-46dd-bb4c-d0a5b31927ec",
         "title" : "Marte",
         "price" : 30000,
         "stock" : 42,
@@ -70,7 +70,7 @@
     {
         "id" : 5,
         "id_category" : 1,
-        "pictureUrl" : "jupiter.webp",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/proyecto-react-5e7e0.appspot.com/o/jupiter.webp?alt=media&token=8762c40b-c2b9-4869-8dbe-bb57bcfba691",
         "title" : "Júpiter",
         "price" : 30000,
         "stock" : 11,
@@ -87,7 +87,7 @@
     {
         "id" : 6,
         "id_category" : 2,
-        "pictureUrl" : "europa.webp",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/proyecto-react-5e7e0.appspot.com/o/europa.webp?alt=media&token=1c20cb16-f251-4e90-94b8-f25578126dcd",
         "title" : "Europa",
         "price" : 25000,
         "stock" : 14,
@@ -104,7 +104,7 @@
     {
         "id" : 7,
         "id_category" : 1,
-        "pictureUrl" : "saturno.webp",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/proyecto-react-5e7e0.appspot.com/o/saturno.webp?alt=media&token=c53e60c3-706c-4604-a5e7-f13bbdc59ba7",
         "title" : "Saturno",
         "price" : 35000,
         "stock" : 18,
@@ -121,7 +121,7 @@
     {
         "id" : 8,
         "id_category" : 2,
-        "pictureUrl" : "titan.webp",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/proyecto-react-5e7e0.appspot.com/o/titan.webp?alt=media&token=f771b163-79b7-43d4-990f-32e59e4bba18",
         "title" : "Titán",
         "price" : 30000,
         "stock" : 16,
@@ -138,7 +138,7 @@
     {
         "id" : 9,
         "id_category" : 1,
-        "pictureUrl" : "urano.webp",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/proyecto-react-5e7e0.appspot.com/o/urano.webp?alt=media&token=e04f0289-766d-4fc6-98f3-1e026652d8bd",
         "title" : "Urano",
         "price" : 40000,
         "stock" : 4,
@@ -155,7 +155,7 @@
     {
         "id" : 10,
         "id_category" : 1,
-        "pictureUrl" : "neptuno.webp",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/proyecto-react-5e7e0.appspot.com/o/neptuno.webp?alt=media&token=e89d0f11-b2e7-4e60-ae60-494840706f9e",
         "title" : "Neptuno",
         "price" : 40000,
         "stock" : 7,
@@ -172,7 +172,7 @@
     {
         "id" : 11,
         "id_category" : 3,
-        "pictureUrl" : "pluton.webp",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/proyecto-react-5e7e0.appspot.com/o/pluton.webp?alt=media&token=1a0b1851-28df-4a32-b5c0-f7fdf3805d7a",
         "title" : "Plutón",
         "price" : 50000,
         "stock" : 10,
@@ -189,7 +189,7 @@
     {
         "id" : 12,
         "id_category" : 3,
-        "pictureUrl" : "eris.webp",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/proyecto-react-5e7e0.appspot.com/o/eris.webp?alt=media&token=00845f6c-b5e8-40a7-b6b8-a64ee3a06d4d",
         "title" : "Eris",
         "price" : 47000,
         "stock" : 14,

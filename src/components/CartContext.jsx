@@ -4,7 +4,7 @@ export const CartContext = createContext()
 
 const CartContextProvider = ({ children }) => {
     const [cartList, setCartList] = useState([]); // Originalmente el carrito está vacío
-    
+
     const addItem = (product, cantidad) => { // Actualiza el carrito agregando un producto la cantidad de veces que le hayamos pedido
         if (isInCart(product.id)) { 
             const index = cartList.findIndex( item => item.id == product.id)

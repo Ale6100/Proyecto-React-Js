@@ -7,15 +7,15 @@ const ItemCarrito = ({ id, pictureUrl, title, cantidad, price }) => {
 
     return (
         <div id={`producto-carrito-${id}`} className="divItemCarrito">
-            <div className="divImagenTituloItemCarrito borde-derecha">
+            <div className="divImagenTituloItemCarrito">
                 <div className="divImagenItemCarrito">
-                    <img src={`/img/${pictureUrl}`}/>
+                    <img src={`${pictureUrl}`}/>
                 </div> 
                 
-                <p className="pTitleItemCarrito">{title}</p>
+                <p>{title}</p>
             </div>
 
-            <div className="divpriceItemCarrito">
+            <div className="divPriceItemCarrito">
                 <div>
                     <p>Pasajes: {cantidad}</p>
                     <p className="pPriceItemCarrito">(${price} c/u)</p>

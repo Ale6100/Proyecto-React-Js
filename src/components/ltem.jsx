@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 const Item = ({ id, pictureUrl, title, price, stock, item }) => {
 
     const [contadorItems, setContadorItems] = useState(0)
-
     const { addItem } = useContext(CartContext);
 
     const onAdd = (cantidad) => {
@@ -20,7 +19,7 @@ const Item = ({ id, pictureUrl, title, price, stock, item }) => {
     return (
         <div className="divItem">
             <div className="divImagenItem">
-                <img src={`/img/${pictureUrl}`}/>
+                <img src={`${pictureUrl}`}/>
             </div>
 
             <div className="divTitlePriceItem">
@@ -30,7 +29,7 @@ const Item = ({ id, pictureUrl, title, price, stock, item }) => {
 
             { // Análogo a lo colocado en ItemDetail
                 contadorItems == 0 ?
-                <ItemCount stock={stock} initial={contadorItems} clickAgregar={(cantidad) => {onAdd(cantidad)}} />
+                <ItemCount stock={stock} initial={contadorItems} clickAgregar={onAdd} />
                 : <Link className="linkBotonIrCarrito" to={`/cart`}> <button className="botonIrCarrito">Ir al carrito</button></Link>
             }
             <div className="divInfoItem">

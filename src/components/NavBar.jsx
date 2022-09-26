@@ -6,28 +6,27 @@ const NavBar = () => {
   return (
     <header className="navBar">
       <div className="title">
-        <Link to="/" className='linkNav'>SPACE TRAVELS</Link>
+        <Link to="/">SPACE TRAVELS</Link>
       </div>
 
       <nav>
         <ul className="categories">
           <li>
-            <Link to="/" className='linkNav'>Inicio</Link>
+            <Link to="/">Inicio</Link>
           </li>
           <li>
-            <Link to="/category/1" className='linkNav'>Planetas</Link>
+            <Link to="/category/1">Planetas</Link>
           </li>
           <li>
-            <Link to="/category/2" className='linkNav'>Satélites</Link>
+            <Link to="/category/2" >Satélites</Link>
           </li>
           <li>
-            <Link to="/category/3" className='linkNav'>Otros</Link>
+            <Link to="/category/3">Otros</Link>
           </li>
         </ul>
       </nav>
 
       <CartWidget />
-
     </header>
   );
 }

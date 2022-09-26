@@ -1,5 +1,5 @@
 import React from 'react';
-import { useContext, useState } from 'react';
+import { useState, useContext } from 'react';
 import { CartContext } from './CartContext';
 import alertaProductoAgregado from '../utils/alertaProductoAgregado';
 import ItemCount from './ItemCount';
@@ -20,7 +20,7 @@ const ItemDetail = ({ item }) => { // Pido que coloque en pantalla una breve des
     return (
         <div className="divDetail">
             <div className="divIzquierdaDetail">
-                <img src={`/img/${item.pictureUrl}`} />
+                <img src={`${item.pictureUrl}`} />
             </div>
 
             <div className="divDerechaDetail">
@@ -46,7 +46,7 @@ const ItemDetail = ({ item }) => { // Pido que coloque en pantalla una breve des
 
                     { // Si contadorItems es igual a cero, mostramos el ItemCount. Sino, mostramos el botón que nos lleva al carrito
                         contadorItems == 0 ?
-                        <ItemCount stock={item.stock} initial={contadorItems} clickAgregar={(cantidad) => {onAdd(cantidad)}} /> // Pido que el setContadorItems vaya a ItemCount
+                        <ItemCount stock={item.stock} initial={contadorItems} clickAgregar={onAdd} />
                         : <Link className="linkBotonIrCarrito" to={`/cart`}><button className="botonIrCarrito">Ir al carrito</button></Link>
                     }
                 </div>

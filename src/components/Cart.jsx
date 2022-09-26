@@ -9,17 +9,17 @@ const Cart = () => {
 
     return (
         <div className="contenedor-carrito">
-            <h1 className="titleCarrito">Carrito</h1>
+            <h1>Carrito</h1>
 
             {
-            (cartList.length == 0) ? // Retorna únicamente esta etiqueta p si el carrito está vacío
+            (cartList.length == 0)
+            ? // Retorna únicamente el siguiente div si el carrito está vacío
             <div className="carritoVacio">
                 <p>El carrito está vacío. Visita la&nbsp;</p>
                 <Link to="/">página principal</Link>
                 <p>&nbsp;para ver todas nuestras ofertas</p>
             </div>
             :
-            
             <>
             <div className="carrito">
                 { // Recorro el carrito colocando todos sus elementos en el DOM
