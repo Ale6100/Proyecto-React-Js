@@ -1,29 +1,35 @@
-import Toastify from 'toastify-js';
+import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 
-const alertaProductoAgregado = (title_prod, cant_prod) => { // Le muestro al usuario que los pasajes que pidió ya se agregaron al carrito, mediante la librería Toastify
+const alertaProductoAgregado = (producto, cantidadActual, cantidadAAgregar, condicion) => { // Le muestro al usuario que los pasajes que pidió ya se agregaron al carrito, mediante la librería Toastify
   let texto
-  if (cant_prod == 1) {
-    texto = `Un pasaje con destino a ${title_prod} agregado al carrito`
+
+  if (condicion === "todo agregado") {
+    texto = (cantidadAAgregar === 1)
+    ? `Un pasaje con destino a ${producto.title} agregado al carrito`
+    : `Agregaste ${cantidadAAgregar} pasajes con destino a ${producto.title} al carrito`
+
+  } else if (condicion === "agregado parcial") { // Ejemplo: si el stock es de 100, pero ya hay 70 productos en el carrito y querés agregar 50 más, entonces recorta 70 - (100 - 50) = 20 productos para no sobrepasar stock
+    texto = `No sobrepases el límite! Recortamos ${cantidadActual - (producto.stock - cantidadAAgregar)} productos para no superar el stock`
+  
   } else {
-    texto = `Agregaste ${cant_prod} pasajes con destino a ${title_prod} al carrito`
+    texto = `Carrito lleno! no puedes agregar más productos`
   }
   
   Toastify({
-      text: texto,
-      duration: 3500,
-      newWindow: true,
-      close: true,
-      gravity: "top",
-      position: "right",
-      stopOnFocus: true,
-      style: {
-        background: "linear-gradient(to right, rgb(0, 0, 0), rgb(60, 60, 100))",
-        border : "1px solid rgb(120, 120, 200)",
-        borderRadius : "5px",
-        marginTop: "23px"
-      }
-    }).showToast();
+    text: texto,
+    duration: 3500,
+    close: true,
+    gravity: "top",
+    position: "right",
+    stopOnFocus: true,
+    style: {
+      background: "linear-gradient(to right, rgb(0, 0, 0), rgb(60, 60, 100))",
+      border : "1px solid rgb(120, 120, 200)",
+      borderRadius : "5px",
+      marginTop: "23px"
+    }
+  }).showToast();
 }
 
 export default alertaProductoAgregado

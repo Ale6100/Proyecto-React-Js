@@ -1,6 +1,6 @@
-import React from 'react';
-import { useContext } from 'react';
-import { CartContext } from './CartContext';
+import React from "react";
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 
 const ItemCarrito = ({ id, pictureUrl, title, cantidad, price }) => {
     const { removeItem } = useContext(CartContext)
@@ -9,7 +9,7 @@ const ItemCarrito = ({ id, pictureUrl, title, cantidad, price }) => {
         <div id={`producto-carrito-${id}`} className="divItemCarrito">
             <div className="divImagenTituloItemCarrito">
                 <div className="divImagenItemCarrito">
-                    <img src={`${pictureUrl}`}/>
+                    <img src={`${pictureUrl}`} alt="Imagen cuerpo celeste"/>
                 </div> 
                 
                 <p>{title}</p>

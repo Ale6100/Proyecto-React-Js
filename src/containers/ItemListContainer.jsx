@@ -1,10 +1,10 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { collection, getDocs, query, where } from "firebase/firestore"
-import { db } from '../utils/firebaseConfig' 
-import Loader from '../components/Loader';
-import ItemList from '../components/ItemList';
+import React from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../utils/firebaseConfig"; 
+import Loader from "../components/Loader";
+import ItemList from "../components/ItemList";
 
 const ItemListContainer = () => {
 
@@ -17,7 +17,7 @@ const ItemListContainer = () => {
         setLoading(true)
         const consultaAlFirestore = async () => {
             let q
-            if (id != undefined) { // Si pasamos un id en la url, entonces no extraigo todos los productos, sino sólo aquellos cuya propiedad id_category es igual a ese id
+            if (id !== undefined) { // Si pasamos un id en la url, entonces no extraigo todos los productos, sino sólo aquellos cuya propiedad id_category es igual a ese id
                 q = query(collection(db, "pasajes"), where("id_category", "==", parseInt(id)))
             } else {
                 q = query(collection(db, "pasajes"))

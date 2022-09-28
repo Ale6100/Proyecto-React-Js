@@ -1,9 +1,8 @@
-import React from 'react';
-import { useState, useContext } from 'react';
-import { CartContext } from './CartContext';
-import alertaProductoAgregado from '../utils/alertaProductoAgregado';
-import ItemCount from './ItemCount';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "./CartContext";
+import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => { // Pido que coloque en pantalla una breve descripción más amplia sobre el pasaje seleccionado
 
@@ -12,7 +11,6 @@ const ItemDetail = ({ item }) => { // Pido que coloque en pantalla una breve des
     const { addItem } = useContext(CartContext);
 
     const onAdd = (cantidad) => {
-        alertaProductoAgregado(item.title, cantidad)
         setContadorItems(cantidad)
         addItem(item, cantidad)
     }
@@ -20,7 +18,7 @@ const ItemDetail = ({ item }) => { // Pido que coloque en pantalla una breve des
     return (
         <div className="divDetail">
             <div className="divIzquierdaDetail">
-                <img src={`${item.pictureUrl}`} />
+                <img src={`${item.pictureUrl}`} alt="Imagen cuerpo celeste" />
             </div>
 
             <div className="divDerechaDetail">
@@ -30,7 +28,7 @@ const ItemDetail = ({ item }) => { // Pido que coloque en pantalla una breve des
             </div>
 
             <div className="divContenedorDetail">
-                {(item.details != undefined) && (
+                {(item.details !== undefined) && (
                 <div className="divDetalles">
                     <p> <span>Categoría</span>: {item.details.category}</p>
                     <p><span>Orbita a</span>: {item.details.orbita}</p>
@@ -45,8 +43,8 @@ const ItemDetail = ({ item }) => { // Pido que coloque en pantalla una breve des
                     <p>Stock: {item.stock}</p>
 
                     { // Si contadorItems es igual a cero, mostramos el ItemCount. Sino, mostramos el botón que nos lleva al carrito
-                        contadorItems == 0 ?
-                        <ItemCount stock={item.stock} initial={contadorItems} clickAgregar={onAdd} />
+                        contadorItems === 0 ?
+                        <ItemCount stock={item.stock} clickAgregar={onAdd} />
                         : <Link className="linkBotonIrCarrito" to={`/cart`}><button className="botonIrCarrito">Ir al carrito</button></Link>
                     }
                 </div>

@@ -297,8 +297,12 @@ nav {
   text-decoration: none;
 }
 
+.contenedor-carrito {
+  padding: 5px;
+}
+
 .carrito {
-  margin: 10px 0;
+  margin: 10px 0 15px 0;
   display: flex;
   justify-content: space-evenly;
   column-gap: 1px;
@@ -374,14 +378,16 @@ nav {
 }
 
 .botonComprar {
-  background-color: rgb(50, 255, 50);
+  background-color: rgb(100, 255, 100);
 }
 
 .botonComprar:hover {
-  background-color: rgb(0, 255, 0);
+  background-color: rgb(50, 255, 50);
 }
 
 .divFinalizarCompra {
+  font-size: 1.3rem;
+  margin: auto;
   padding: 5px;
   width: 300px;
   text-align: center;
@@ -393,7 +399,21 @@ nav {
   margin-bottom: 5px;
 }
 
-.divFinalizarCompra div {
+#formDatos input {
+  font-size: 1.1rem;
+  margin: 5px 0px;
+  border: 1px solid rgb(30, 30, 50);
+  border-radius: 3px;
+  background-color: rgb(230, 230, 230);
+}
+
+#formDatos div {
   display: flex;
   justify-content: space-around;
+}
+
+#formDatos div button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

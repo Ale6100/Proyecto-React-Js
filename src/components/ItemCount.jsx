@@ -1,9 +1,9 @@
-import React from 'react';
-import { useState } from 'react';
+import React from "react";
+import { useState } from "react";
 
-const IntemCount = ({stock, initial, clickAgregar}) => {
+const IntemCount = ({stock, clickAgregar}) => {
     
-    const [cantidad, setCantidad] = useState(initial);
+    const [cantidad, setCantidad] = useState(0);
 
     function aumentarContador() { // Aumenta en 1 el número que representa la cantidad items a añadir al carrito, siempre y cuando haya stock
         if (cantidad < stock) {
@@ -25,7 +25,7 @@ const IntemCount = ({stock, initial, clickAgregar}) => {
                 <button onClick={disminuirContador}>-</button>
             </div>
 
-            <button onClick={()=>clickAgregar(cantidad)} disabled={cantidad==0}>Añadir al carrito</button>
+            <button onClick={()=>clickAgregar(cantidad)} disabled={cantidad===0}>Añadir al carrito</button>
         </div>
     );
 }

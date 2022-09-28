@@ -1,10 +1,10 @@
-import React from 'react';
-import { useState, useEffect } from "react"
-import { useParams } from 'react-router-dom';
-import { getDoc, doc } from "firebase/firestore"
-import { db } from '../utils/firebaseConfig' 
-import Loader from "../components/Loader"
-import ItemDetail from "../components/ItemDetail"
+import React from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { getDoc, doc } from "firebase/firestore";
+import { db } from "../utils/firebaseConfig";
+import Loader from "../components/Loader";
+import ItemDetail from "../components/ItemDetail";
 
 const ItemDetailContainer = () => {
     
@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
         .then(result => setData(result)) // Actualizo el objeto data. Lo declaro como el objeto que devolvió la promesa
         .catch(err => {console.error(err); setError(true)})
         .finally(() => setLoading(false))
-    }, [])
+    }, [id])
         
     return (
         <div>
