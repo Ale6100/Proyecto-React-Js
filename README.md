@@ -6,7 +6,7 @@ Este proyecto lo realicé en mi curso de ReactJs donde debía hacer un e-commerc
 
 Lee atentamente las siguientes instrucciones si deseas obtener una copia funcional del proyecto en tu computadora.
 
-Primero debes descargar el archivo comprimido _zip_ desde el botón verde "code" o  hacer cick [aquí](https://github.com/Ale6100/Proyecto-React-Js/archive/refs/heads/main.zip).
+Primero debes descargar el archivo comprimido _zip_ desde el botón verde "code" o  hacer click [aquí](https://github.com/Ale6100/Proyecto-React-Js/archive/refs/heads/main.zip).
 
 Si en cambio deseas tener una copia en tu propio repositorio de GitHub puedes _Forkear_ el proyecto. 
 
