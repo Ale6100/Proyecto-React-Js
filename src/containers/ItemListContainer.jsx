@@ -5,6 +5,7 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../utils/firebaseConfig"; 
 import Loader from "../components/Loader";
 import ItemList from "../components/ItemList";
+import actualizarClase from "../utils/actualizarClase";
 
 const ItemListContainer = () => {
 
@@ -25,8 +26,7 @@ const ItemListContainer = () => {
             const querySnapshot = await getDocs(q) // Obtiene los documentos de la collección de la base de datos db. La colección se llama pasajes
             const dataFromFirestore = querySnapshot.docs.map(document => (
                 { // Recorro el array y coloco el id de firestore en cada objeto
-                    id: document.id,
-                    ...document.data()
+                    id: document.id, ...document.data()
                 }
             ))
             return dataFromFirestore
@@ -35,20 +35,38 @@ const ItemListContainer = () => {
         .then(result => setData(result))
         .catch(err => {console.error(err); setError(true)})
         .finally(() => setLoading(false))
+        
+        const ruta = window.location.pathname
+        if (ruta === "/") { // Cambio las clases de los links del la NavBar para indicarle al usuario donde está ubicado
+            actualizarClase("navInicio")
+        } else if (ruta === "/category/1") {
+            actualizarClase("navPlanetas")
+        } else if (ruta === "/category/2") {
+            actualizarClase("navSatelites")
+        } else if (ruta === "/category/3") {
+            actualizarClase("navOtros")
+        }
+        
     }, [id]) // La función flecha del useEffect se va a ejecutar cuando se monta el componente y cuando se actualiza el id
 
     return (
-        <div>
+        <main>
             {
             loading
             ? <Loader />
             : (
                 error 
                 ? <p className="errorCargaDatos">Error! No se cargaron los datos. Intente de nuevo más tarde</p>
-                : <ItemList items={data} />
+                :
+                <>
+                    <div className="divIntro">
+                        <p>Quiere darse una "escapada" en sus vacaciones? Aproveche las novedosas ofertas que tenemos y compre un pasaje para pisar los cuerpos celestes rocosos disponibles y sobrevolar los gaseosos! Aventúrese a hacer un recorrido fuera de este mundo!</p>
+                    </div>
+                    <ItemList items={data} />
+                </> 
                 )
             }
-        </div>
+        </main>
     );
 }
 

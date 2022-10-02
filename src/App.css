@@ -37,11 +37,20 @@ nav {
 }
 
 .categories li a {
+  padding: 5px;
   text-decoration: none;
   color: rgb(255, 255, 255);
   white-space: nowrap;
   display: inline-block;
   border-radius: 5px;
+}
+
+.categories li a:hover {
+  background-color: rgb(60, 60, 100);
+}
+
+.seleccionado {
+  background-color: rgb(120, 120, 200);
 }
 
 .iconoCarrito {
@@ -50,7 +59,16 @@ nav {
 }
 
 .iconoCarrito a {
+  padding: 5px;
   color: rgb(255, 255, 255);
+}
+
+.iconoCarrito a:hover {
+  background-color: rgb(60, 60, 100);
+}
+
+#navCarrito {
+  border-radius: 5px;
 }
 
 .iconoCarrito p {
@@ -65,6 +83,10 @@ nav {
   font-weight: bold;
   text-align: center;
   color: rgb(30, 30, 50);
+}
+
+main {
+  padding: 10px;
 }
 
 .loader {
@@ -85,8 +107,13 @@ nav {
   text-align: center;
 }
 
+.divIntro {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
 .itemList {
-  padding: 5px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -109,6 +136,11 @@ nav {
 
 .divImagenItem {
   height: 210px;
+}
+
+.divImagenItem img {
+  border-top-left-radius : 3px;
+  border-top-right-radius : 3px;
 }
 
 .divTitlePriceItem {
@@ -193,14 +225,13 @@ nav {
 }
 
 .divDetail {
-  margin: 5px;
   padding: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: 
-  "divIzquierda divDerecha divDerecha"
-  "divIzquierda divAbajo   divAbajo";
+  "divImagen divDescripcion      divDescripcion"
+  "divImagen divDetallesContador divDetallesContador";
   align-items: center;
   text-align: center;
   font-size: 1.3rem;
@@ -209,7 +240,7 @@ nav {
 }
 
 .divIzquierdaDetail {
-  grid-area: divIzquierda;
+  grid-area: divImagen;
 }
 
 .divIzquierdaDetail img {
@@ -222,7 +253,7 @@ nav {
 
 .divDerechaDetail {
   padding: 0px 5px;
-  grid-area: divDerecha;
+  grid-area: divDescripcion;
   display: flex;
   flex-direction: column;
 }
@@ -237,7 +268,7 @@ nav {
 }
 
 .divContenedorDetail {
-  grid-area: divAbajo;
+  grid-area: divDetallesContador;
   display: flex;
   justify-content: space-around;
 }
@@ -278,10 +309,6 @@ nav {
   background-color: rgb(200, 200, 200);
 }
 
-.contenedor-carrito {
-  padding: 0 5px;
-}
-
 .contenedor-carrito h1 {
   text-align: center;
   font-size: 2.5rem;
@@ -289,8 +316,8 @@ nav {
 
 .carritoVacio {
   margin-top: 10px;
-  display: flex;
   font-size: 1.4rem;
+  text-align: center;
 }
 
 .carritoVacio a {
@@ -400,6 +427,7 @@ nav {
 }
 
 #formDatos input {
+  padding: 1px 3px;
   font-size: 1.1rem;
   margin: 5px 0px;
   border: 1px solid rgb(30, 30, 50);
@@ -416,4 +444,51 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+@media screen and (max-width: 470px) {
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .categories li a {
+    font-size: 1rem;
+  }
+
+  .divIntro {
+    font-size: 1rem;
+  }
+
+  .carritoVacio p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .divDetail {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "divImagen           divDescripcion"
+    "divDetallesContador divDetallesContador";
+    font-size: 1.1rem; 
+  }
+
+  .divIzquierdaDetail img {
+    width: 175px;
+  }
+
+  .divDerechaDetail {
+    padding: 0px 1px;
+    grid-area: divDescripcion;
+  }
+  
+  .pTitleDetail {
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+  
+  .pDescriptionDetail {
+    font-size: 1.1rem;
+  }
 }

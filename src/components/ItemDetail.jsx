@@ -42,7 +42,7 @@ const ItemDetail = ({ item }) => { // Pido que coloque en pantalla una breve des
                     <p>${item.price}</p>
                     <p>Stock: {item.stock}</p>
 
-                    { // Si contadorItems es igual a cero, mostramos el ItemCount. Sino, mostramos el botón que nos lleva al carrito
+                    {
                         contadorItems === 0 ?
                         <ItemCount stock={item.stock} clickAgregar={onAdd} />
                         : <Link className="linkBotonIrCarrito" to={`/cart`}><button className="botonIrCarrito">Ir al carrito</button></Link>

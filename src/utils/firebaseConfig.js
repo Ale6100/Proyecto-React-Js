@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 
-const firebaseConfig = {
+const firebaseConfig = { // Este objeto lo proporciona firebase. Si quieres copiar y modificar el código a tu gusto debes generar el tuyo
   apiKey: process.env.API_KEY, // Accede a mi api key,
   authDomain: "proyecto-react-5e7e0.firebaseapp.com",
   projectId: "proyecto-react-5e7e0",
@@ -13,8 +13,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig); // Me conecto con firebase
 const db = getFirestore(app) // Me conecto con firestore
 
+// Traigo los datos del json pero sólo se van a leer una vez, ya que las siguientes veces van a estar subidos a firebase 
+// La primera vez que se ejecute el código debe estar descomentada la primera línea del index.js
 async function cargarBaseDeDatos() {
-  const promise = await fetch("./json/pasajes.json") // El json solo se va a leer una vez
+  const promise = await fetch("./json/pasajes.json") 
   const pasajes = await promise.json()
   pasajes.forEach(async (producto) => {
     await addDoc(collection(db, "pasajes"),

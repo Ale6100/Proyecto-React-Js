@@ -9,11 +9,6 @@ const ItemList = ({ items }) => { // Obtiene un array de items y los coloca uno 
             items.map( item => (
                 <Item            
                     key = {item.id}
-                    id = {item.id}
-                    pictureUrl = {item.pictureUrl}
-                    title = {item.title}
-                    price = {item.price}
-                    stock = {item.stock}
                     item = {item}
                 />
             ))

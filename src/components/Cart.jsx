@@ -8,11 +8,12 @@ import { db } from "../utils/firebaseConfig";
 import Swal from "sweetalert2";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
+import actualizarClase from "../utils/actualizarClase";
 
 const Cart = () => {
     const { cartList, clear, precioTotal } = useContext(CartContext); // Traigo el carrito y las funciones necesarias guardadas en el contexto CartContext
 
-    // Las siguientes tres validaciones no son perfectas, pero tratan de simular los atributos required de los inputs (ya que en este código los required no funcionan para validar)
+    // Las siguientes tres validaciones no son perfectas, pero tratan de simular al atributo required de los inputs (ya que en este código los required no funcionan para validar)
     const textoValido = (texto) => { // Devuelve true si el string "texto" tiene algún carácter no vacío
         return texto.split("").some(elemento => elemento !== " ")
     }
@@ -88,17 +89,19 @@ const Cart = () => {
         }
     }
 
+    if (document.getElementById("navCarrito")) { // Coloreo el link del carrito (ya viene coloreado por defecto, pero este if es por si se borró)
+        actualizarClase("navCarrito")
+    }
+
     return (
-        <div className="contenedor-carrito">
+        <main className="contenedor-carrito">
             <h1>Carrito</h1>
 
             {
             (cartList.length === 0)
             ? // Retorna únicamente el siguiente div si el carrito está vacío
             <div className="carritoVacio">
-                <p>El carrito está vacío. Visita la&nbsp;</p>
-                <Link to="/">página principal</Link>
-                <p>&nbsp;para ver todas nuestras ofertas</p>
+                <p>El carrito está vacío. Visita la <Link to="/">página principal</Link> para ver todas nuestras ofertas</p>
             </div>
             :
             <>
@@ -118,7 +121,7 @@ const Cart = () => {
             <div className="divFinalizarCompra">
                 <p>Total: ${precioTotal()}</p>
                 <form id="formDatos">
-                    <input type="text" placeholder="Nombre" />
+                    <input type="text" placeholder="Nombre y apellido" />
                     <input type="number" placeholder="Teléfono" />
                     <input type="email" placeholder="Email" />
                     <div>
@@ -129,7 +132,7 @@ const Cart = () => {
             </div>
             </>
             }
-        </div>
+        </main>
     )
 }
 

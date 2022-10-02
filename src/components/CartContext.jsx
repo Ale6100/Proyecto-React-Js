@@ -10,15 +10,15 @@ const CartContextProvider = ({ children }) => {
         
         if (isInCart(product.id)) { 
             /*
-            Los siguientes condicionales analizan si se puede agregar al carrito todo lo que pediste cuando apretas en "Agregar al carrito".
-            Está pensado para evitar aquellos casos donde se agreguen productos al carrito pero en vez de ir al carrito y comprar... se decida cambiar de página y volver para agregar al carrito el mismo producto, provocando que en el carrito queden más items que el stock disponible
+            Los siguientes condicionales analizan si se puede agregar al carrito todo lo que pediste cuando apretas en "Añadir al carrito".
+            Está pensado para evitar aquellos casos donde se agreguen productos al carrito pero en vez de ir al carrito y comprar... se decida cambiar de página y volver para agregar al carrito el mismo producto, provocando que en el carrito puedan quedar más items que el stock disponible
             */
             const index = cartList.findIndex( item => item.id === product.id)
             if (product.stock >= cartList[index].cantidad + cantidad) { // Si se puede agregar todo lo que pediste, lo hace 
                 alertaProductoAgregado(product, cartList[index].cantidad, cantidad, "todo agregado")
                 cartList[index].cantidad += cantidad
 
-            } else if ((product.stock < cartList[index].cantidad + cantidad) && (product.stock !== cartList[index].cantidad)) { // Si la cantidad a agregar sobrepasa al stock, entonces defino la cantidad en el carrito como la máxima posible (es decir, como al stock)
+            } else if ((product.stock < cartList[index].cantidad + cantidad) && (product.stock !== cartList[index].cantidad)) { // Si la cantidad de items actuales en el carrito de un mismo producto + la cantidad a agregar sobrepasa al stock, entonces defino la cantidad de dichos items como la máxima posible (es decir, como al stock)
                 alertaProductoAgregado(product, cartList[index].cantidad, cantidad, "agregado parcial")
                 cartList[index].cantidad = product.stock
             
@@ -38,8 +38,6 @@ const CartContextProvider = ({ children }) => {
     const clear = () => { // Borra el carrito (lo redefine como un array vacío)
         setCartList([])
     }
-
-
 
     const isInCart = (id) => { // Devuelve true si el producto con este id ya pertenece al carrito
         return cartList.some(item => item.id === id)

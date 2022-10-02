@@ -9,7 +9,7 @@ const CartWidget = () => {
 
     return (
         <div className="iconoCarrito">
-            <Link to="/cart"> <BsCart4/> </Link>
+            <Link id="navCarrito" className="seleccionado" to="/cart"> <BsCart4/> </Link>
             <p hidden={cantidadItemsCarrito()===0}>{cantidadItemsCarrito()}</p>
         </div>
     );

@@ -192,7 +192,7 @@
         "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/proyecto-react-5e7e0.appspot.com/o/eris.webp?alt=media&token=00845f6c-b5e8-40a7-b6b8-a64ee3a06d4d",
         "title" : "Eris",
         "price" : 47000,
-        "stock" : 20,
+        "stock" : 200,
         "details" : {
             "category" : "planeta enano",
             "orbita" : "Sol",
