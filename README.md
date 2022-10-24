@@ -42,6 +42,9 @@ _Los archivos baseDeDatos.js, pasajes.json y la carpeta img no son necesarios pa
 * [Firebase](https://firebase.google.com/)
 * [Sweet Alert 2](https://sweetalert2.github.io/)
 * [Toastify](https://apvarun.github.io/toastify-js/)
+* [React Icons](https://react-icons.github.io/react-icons)
+* [React Router Dom](https://www.npmjs.com/package/react-router-dom)
+* [Loaders - Uiball](https://uiball.com/loaders/)
 
 ## Autores ✒️
 

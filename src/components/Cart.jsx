@@ -57,13 +57,7 @@ const Cart = () => {
             }
             const newOrderRef = doc(collection(db, "orders")) // No coloco tercer parámetro para que las órdenes de compra tengan un id aleatorio definido por firebase. Observar que es similar al addDoc de firebaseConfig.js
             await setDoc(newOrderRef, orden) // Crea la orden en un documento de la base de datos db en la colección orders (si orders no existe, primero lo crea)
-            
-            Swal.fire({
-                icon: 'success',
-                title: 'Compra finalizada!',
-                text: `El id de su orden es ${newOrderRef.id}`
-            })
-            
+                       
             cartList.forEach( async producto => {
                 const productoRef = doc(db, "pasajes", producto.id) // Obtenemos la referencia del documento con id "producto.id" de la colección "pasajes" en la base de datos db
                 await updateDoc(productoRef, { // Actualiza la propiedad stock de ese producto (objeto) referenciado
@@ -71,6 +65,11 @@ const Cart = () => {
                 })
             })
             clear()
+            Swal.fire({
+                icon: 'success',
+                title: 'Compra finalizada!',
+                text: `El id de su orden es ${newOrderRef.id}`
+            })
         } else {
             Toastify({
                 text: "Datos incorrectos, por favor revisalos",

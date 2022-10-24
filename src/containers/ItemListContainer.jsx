@@ -18,7 +18,7 @@ const ItemListContainer = () => {
         setLoading(true)
         const consultaAlFirestore = async () => {
             let q
-            if (id !== undefined) { // Si pasamos un id en la url, entonces no extraigo todos los productos, sino sólo aquellos cuya propiedad id_category es igual a ese id
+            if (id !== undefined) { // Si pasamos un id en la url, entonces no extraigo todoos productos, sino sólo aquellos cuya propiedad id_category es igual a ese ids l
                 q = query(collection(db, "pasajes"), where("id_category", "==", parseInt(id)))
             } else {
                 q = query(collection(db, "pasajes"))

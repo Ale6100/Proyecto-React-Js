@@ -3,11 +3,11 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 
 const firebaseConfig = { // Este objeto lo proporciona firebase. Si quieres copiar y modificar el código a tu gusto debes generar el tuyo
   apiKey: process.env.API_KEY, // Accede a mi api key,
-  authDomain: "proyecto-react-5e7e0.firebaseapp.com",
-  projectId: "proyecto-react-5e7e0",
-  storageBucket: "proyecto-react-5e7e0.appspot.com",
-  messagingSenderId: "1080493102289",
-  appId: "1:1080493102289:web:b93a413f22e4a32f14a1f0"
+  authDomain: "proyecto-curso-react-682de.firebaseapp.com",
+  projectId: "proyecto-curso-react-682de",
+  storageBucket: "proyecto-curso-react-682de.appspot.com",
+  messagingSenderId: "571627735275",
+  appId: "1:571627735275:web:c34f200ec05360177296ae"
 };
 
 const app = initializeApp(firebaseConfig); // Me conecto con firebase
