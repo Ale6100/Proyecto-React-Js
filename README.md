@@ -2,6 +2,8 @@
 
 Este proyecto lo realicé en mi curso de ReactJs donde debía hacer un e-commerce. Se trata de una agencia de viajes espacial donde puedes simular que te compras pasajes con destino a otros cuerpos celestes pertenecientes al sistema solar.
 
+Te invito a ver una demo subida a la web [aquí](https://spacetravels.netlify.app/)
+
 ## Comenzando 🚀
 
 Lee atentamente las siguientes instrucciones si deseas obtener una copia funcional del proyecto en tu computadora.
@@ -27,8 +29,6 @@ Instala las dependencias con el comando
 Corre el proyecto con el comando
 
 ```npm start```
-
-Te invito a ver una demo subida a la web [aquí](https://spacetravels.netlify.app/)
 
 _Los archivos baseDeDatos.js, pasajes.json y la carpeta img no son necesarios para que funcione el proyecto, pero los dejo como copia de respaldo y constancia sobre cómo se hizo el trabajo ya que los datos de los pasajes los extraigo de firebase, pero antes de extraerlos los creé en pasajes.json usando las imágenes de img y los subí a firebase desde este mismo código gracias a baseDeDatos.js._
 
