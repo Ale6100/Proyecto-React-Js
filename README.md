@@ -22,15 +22,21 @@ Necesitas tener previamente descargado e instalado [NodeJs](https://nodejs.org/)
 
 Instala las dependencias con el comando
 
-```npm install```
+```
+npm install
+```
+
+Aunque no son necesarios para el funcionamiento del proyecto una vez que está terminado, incluí los archivos baseDeDatos.js, pasajes.json y la carpeta img como copia de respaldo y para documentar el proceso de trabajo. Utilicé los datos de pasajes extraídos de Firebase, pero antes de ello, los creé en pasajes.json utilizando las imágenes de la carpeta img. Además, desde el mismo código, pude subirlos a Firebase gracias a la implementación de baseDeDatos.js. A continuación explico los pasos a seguir:
+
+La idea es trabajar con datos en firebase. Estos datos están en pasajes.json. Lo que debes hacer es pasar estos datos colocando tus credenciales de firebase en firebaseConfig.js. También debes saber que los links correspondientes a las imágenes del json pueden ser cualquiera. Ocupate de subirlas a algún lado (como por ejemplo al Storage de firebase como hice yo) y luego poner esos links en el json. Una vez hecho esto, debes exportar los datos del json a firebase ejecutando el programa con `npm start` una sóla vez mientras la primera línea de index.js está descomentada, luego debes comentarla para que no trate de exportar los datos dos veces.
 
 ## Despliegue 📦
 
 Corre el proyecto con el comando
 
-```npm start```
-
-_Los archivos baseDeDatos.js, pasajes.json y la carpeta img no son necesarios para que funcione el proyecto, pero los dejo como copia de respaldo y constancia sobre cómo se hizo el trabajo ya que los datos de los pasajes los extraigo de firebase, pero antes de extraerlos los creé en pasajes.json usando las imágenes de img y los subí a firebase desde este mismo código gracias a baseDeDatos.js._
+```
+npm start
+```
 
 ## Construido con 🛠️
 
@@ -46,7 +52,7 @@ _Los archivos baseDeDatos.js, pasajes.json y la carpeta img no son necesarios pa
 * [React Router Dom](https://www.npmjs.com/package/react-router-dom)
 * [Loaders - Uiball](https://uiball.com/loaders/)
 
-## Autores ✒️
+## Autor ✒️
 
 * **Alejandro Portaluppi** - [LinkedIn](https://www.linkedin.com/in/alejandro-portaluppi/)
 
