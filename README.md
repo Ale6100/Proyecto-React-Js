@@ -1,6 +1,8 @@
-# Space Travels / Proyecto e-commerce ReactJs
+# Space Travels | Proyecto e-commerce ReactJs
 
-Este proyecto lo realicé en mi curso de ReactJs donde debía hacer un e-commerce. Se trata de una agencia de viajes espacial donde puedes simular que te compras pasajes con destino a otros cuerpos celestes pertenecientes al sistema solar.
+Este proyecto lo inicié en un curso de ReactJs donde debía hacer un e-commerce. Se trata de una agencia de viajes espacial donde puedes simular que te compras pasajes con destino a otros cuerpos celestes pertenecientes al sistema solar.
+
+**Importante**: Este es mi único proyecto con Create React App ya que es una tecnología que hoy en día se incita a no utilizar. En su lugar, actualmente hago mis proyectos frontend con ReactJS+Vite+Tailwind+TypeScript. Podría actualizar las tecnologías de este proyecto, pero no lo hago para dejarlo como mero recuerdo.
 
 Te invito a ver una demo subida a la web [aquí](https://spacetravels.netlify.app/)
 
@@ -10,7 +12,7 @@ Lee atentamente las siguientes instrucciones si deseas obtener una copia funcion
 
 Primero debes descargar el archivo comprimido _zip_ desde el botón verde "code" o  hacer click [aquí](https://github.com/Ale6100/Proyecto-React-Js/archive/refs/heads/main.zip).
 
-Si en cambio deseas tener una copia en tu propio repositorio de GitHub puedes _Forkear_ el proyecto. 
+Si en cambio deseas tener una copia en tu propio repositorio de GitHub puedes _Forkear_ el proyecto.
 
 Mira **Despliegue** para conocer cómo desplegar el proyecto.
 
@@ -54,7 +56,10 @@ npm start
 
 ## Autor ✒️
 
-* **Alejandro Portaluppi** - [LinkedIn](https://www.linkedin.com/in/alejandro-portaluppi/)
+| <img src="https://avatars.githubusercontent.com/u/107259761?v=4" width=50>|
+|:-:|
+| **Alejandro Portaluppi** |
+| <a href="https://github.com/Ale6100"><img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/></a> <a href="https://www.linkedin.com/in/alejandro-portaluppi"><img src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/></a> |
 
 ## Expresiones de Gratitud 🎁
 

@@ -157,7 +157,7 @@ main {
 }
 
 .divInfoItem {
-  padding: 0px 3px; 
+  padding: 0px 3px;
   position: absolute;
   right: 5%;
   top: 1.5%;
@@ -229,7 +229,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
   "divImagen divDescripcion      divDescripcion"
   "divImagen divDetallesContador divDetallesContador";
   align-items: center;
@@ -446,6 +446,29 @@ main {
   align-items: center;
 }
 
+.error404 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#creditos {
+  position: fixed;
+  right: 2vw;
+  bottom: 1vh;
+  transition: transform 0.5s;
+  color: rgb(255, 255, 255);
+}
+
+#creditos:hover {
+  transform: scale(1.1);
+}
+
+#creditos a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
 @media screen and (max-width: 470px) {
   .title {
     font-size: 0.9rem;
@@ -468,10 +491,10 @@ main {
   .divDetail {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
     "divImagen           divDescripcion"
     "divDetallesContador divDetallesContador";
-    font-size: 1.1rem; 
+    font-size: 1.1rem;
   }
 
   .divIzquierdaDetail img {
@@ -482,12 +505,12 @@ main {
     padding: 0px 1px;
     grid-area: divDescripcion;
   }
-  
+
   .pTitleDetail {
     margin-bottom: 30px;
     font-size: 2rem;
   }
-  
+
   .pDescriptionDetail {
     font-size: 1.1rem;
   }
